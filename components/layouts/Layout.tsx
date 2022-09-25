@@ -15,7 +15,7 @@ export const Layout: FC<LayoutProps> = ({children, title}) => {
                 <meta name="keywords" content="pokemon, pokedex"/>
 
                 <meta property="og:title" content={'Información de ' + title} />
-                <meta property="og:description" content={'Datos del pokemon ' + title} />
+                <meta property="og:description" content={'Aplicación de pokemons, ' + title} />
                 <meta property="og:image" content={origin + '/img/banner.png'} />
             </Head>
 
