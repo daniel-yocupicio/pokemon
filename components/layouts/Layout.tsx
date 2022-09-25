@@ -3,6 +3,8 @@ import Head from "next/head"
 import {Layout as LayoutProps} from '../../interfaces';
 import { Navbar } from "../ui";
 
+const origin = (typeof window === 'undefined') ? '' : window.location.origin;
+
 export const Layout: FC<LayoutProps> = ({children, title}) => {
     return (
         <>
@@ -11,6 +13,10 @@ export const Layout: FC<LayoutProps> = ({children, title}) => {
                 <meta name="author" content="Daniel Guadalupe Yocupicio Vázquez" />
                 <meta name="description" content="Información de pokemones" />
                 <meta name="keywords" content="pokemon, pokedex"/>
+
+                <meta property="og:title" content={'Información de ' + title} />
+                <meta property="og:description" content={'Datos del pokemon ' + title} />
+                <meta property="og:image" content={origin + '/img/banner.png'} />
             </Head>
 
             <Navbar />
